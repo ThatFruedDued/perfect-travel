@@ -19,6 +19,7 @@ class App extends React.Component {
     while (val < -180) {
       val += 360;
     }
+    val = Math.round(val * 100) / 100;
     this.setState({ output: table[val.toString()] || "" });
   }
 
